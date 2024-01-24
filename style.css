@@ -1,0 +1,149 @@
+
+:root {
+    --bg-darkmode: url("night01.jpg")
+    --bg-lightmode: url("sunset01.jpg")
+
+    --text-darkmode: #61829e;
+    --text-lightmode: #ffefce;
+
+    --font-darkmode: #ffefce;
+    --font-lightmode: #61829e;
+
+    --item-darkmode: #61829e;
+    --item-lightmode: #ffefce;
+
+    --check-darkmode: #61829e;
+    --check-lightmode: #ffefce;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("sunset01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffefce;
+    
+}
+
+.container {
+    margin-top: 85px;
+    width: 300px;
+    max-width: 500px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    flex-grow: 0;
+    text-shadow: 2px 2px 5px #61829e;
+}
+
+.darkmode-tog {
+    width: 30px;
+    height: 30px;
+    background-image: url('/moon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-grow: 0;
+}
+
+input[type=text] {
+    padding: 20px 10px;
+    font-size: 15px;
+    width: calc(100% - 20px);
+    border: none;
+    margin-bottom: 40px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    background-color: var(--item-lightmode);
+    color: var(--font-lightmode);
+    padding: 10px;
+    height: 35px;
+    font-size: 15px;
+    border-bottom: solid 1px #61829e;
+}
+
+input[type=checkbox]{
+    width: 18px;
+    height: 18px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type=checkbox]:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+}
+
+input[type=checkbox]:checked:before{
+    background-color: #61829e;
+}
+
+input[type=checkbox]:checked:after{
+    content: "";
+    border: solid #ffefce;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 8px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: 6px;
+}
+
+.item-checked {
+    text-decoration: line-through;
+}
+
+.footer {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--item-lightmode);
+    color: var(--font-lightmode);
+    padding: 10px 10px;
+}
+
+.footer a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #61829e;
+}
+
+.footer a:hover {
+    color: #ffcf70;
+}
+
+.footer a.active {
+    color: #ffcf70;
+}
+
+
+
+
+
+/* Aqui se inicia o darkmode */
+
+body.darkmode{
+    background-color: var(--bg-darkmode);
+}
