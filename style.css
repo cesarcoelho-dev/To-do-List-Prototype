@@ -145,5 +145,19 @@ input[type=checkbox]:checked:after{
 /* Aqui se inicia o darkmode */
 
 body.darkmode{
-    background-color: var(--bg-darkmode);
+    background-image: url("/night01.jpg");
+    h1{
+        flex-grow: 0;
+        text-shadow: 2px 2px 5px #fffab2;
+    }
+    .darkmode-tog{
+        background-image: url('/sun.svg');
+        filter: invert(27%) sepia(51%) saturate(187%) 
+        hue-rotate(346deg) brightness(129%) contrast(97%);
+    }
+    .darkmode-tog:hover{
+        filter: invert(27%) sepia(51%) saturate(1000%) 
+        hue-rotate(346deg) brightness(129%) contrast(97%);
+    }
+
 }
